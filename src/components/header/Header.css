@@ -1,0 +1,17 @@
+.container {
+  display: grid;
+  grid-template-areas: "logo navigation navigation navigation";
+
+  background-color: #232b2b;
+  color: white;
+  height: 75px;
+}
+
+.logo-container {
+  grid-area: logo;
+  display: grid;
+}
+
+.logo {
+  margin: auto;
+}

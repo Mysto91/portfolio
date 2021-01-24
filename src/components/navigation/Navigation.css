@@ -1,0 +1,59 @@
+.navigation {
+  grid-area: navigation;
+  display: grid;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  color: white;
+
+  margin: auto;
+  margin-left: 0;
+}
+
+li {
+  float: left;
+  width: 125px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+  color: black;
+}
+
+li a.active {
+  text-decoration: underline dotted white;
+}
+
+@media screen and (min-width: 900px) {
+  .responsive-link {
+    display: block;
+  }
+
+  .nav-icon {
+    display: none;
+    float: right;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .responsive-link {
+    display: none;
+  }
+
+  li {
+    float: right;
+  }
+}

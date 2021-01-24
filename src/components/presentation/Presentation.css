@@ -1,0 +1,30 @@
+.presentation-container {
+  display: grid;
+  height: 500px;
+}
+
+.presentation-text {
+  grid-area: text;
+  width: 100%;
+}
+
+.presentation-image {
+  grid-area: image;
+  background-image: url("https://i.pinimg.com/originals/0b/06/39/0b06397a3199bee4a5922ee4488ebf5a.jpg");
+  background-size: cover;
+}
+
+@media screen and (min-width: 900px) {
+  .presentation-container {
+    grid-template-areas: "text image";
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .presentation-container {
+    grid-template-areas:
+      "text"
+      "image";
+  }
+}
