@@ -1,0 +1,17 @@
+.horizontal-container {
+  background-color: #b7d2de;
+  opacity: 0.8;
+  color: white;
+}
+
+@media screen and (min-width: 900px) {
+  .horizontal-container {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .horizontal-container {
+    height: 200px;
+  }
+}

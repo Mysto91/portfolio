@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import HorizontalContainer from '../horizontalContainer/HorizontalContainer'
 import Presentation from '../presentation/Presentation'
 import './Body.css'
 
@@ -7,7 +8,7 @@ export default class Body extends Component {
         return (
             <div>
                 <Presentation />
-                <div className="transition-container"></div>
+                <HorizontalContainer />
             </div>
         )
     }

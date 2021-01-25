@@ -10,8 +10,9 @@
 
 .presentation-image {
   grid-area: image;
-  background-image: url("https://i.pinimg.com/originals/0b/06/39/0b06397a3199bee4a5922ee4488ebf5a.jpg");
+  background-image: url("https://www.teahub.io/photos/full/22-220999_web-developer-wallpaper-web-development.jpg");
   background-size: cover;
+  filter: drop-shadow(0 0 0.75rem black);
 }
 
 @media screen and (min-width: 900px) {

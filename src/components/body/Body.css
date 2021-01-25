@@ -1,4 +1,5 @@
 .transition-container {
-  background-color: #cbc9c5;
   height: 500px;
+  background-image: url("https://i.pinimg.com/originals/0b/06/39/0b06397a3199bee4a5922ee4488ebf5a.jpg");
+  background-size: cover;
 }
