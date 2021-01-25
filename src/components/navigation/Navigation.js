@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import './Navigation.css';
 
 export default class Navigation extends Component {
+
+    handleClick = () => {
+        console.log("gérer le clique");
+    }
+
     render() {
         return (
             <div className="navigation">
@@ -12,8 +17,8 @@ export default class Navigation extends Component {
                     <li><a className="responsive-link" href="#">Github</a></li>
                     <li><a className="responsive-link" href="#">Contact</a></li>
                     <li>
-                        <a href="javascript:void(0);" class="nav-icon" onclick="functionAFaire()">
-                            <i class="fa fa-bars fa-w-14 fa-3x"></i>
+                        <a href="#" className="nav-icon" onClick={this.handleClick}>
+                            <i className="fa fa-bars fa-w-14 fa-3x"></i>
                         </a>
                     </li>
                 </ul>
