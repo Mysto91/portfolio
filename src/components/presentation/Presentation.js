@@ -14,8 +14,15 @@ export default class Presentation extends Component {
                         Etienne TRAN
                         Je suis un ingénieur spécialisé dans le développement web
                     </p>
-                </div >
-                <div className="presentation-image"></div >
+                </div>
+                <div className="profile-image">
+                    <img src="images/me.png"></img>
+                </div>
+                <div className="presentation-image">
+                    <div className="text-container opacity-black">
+                        <p>&lt;Présentation/&gt;</p>
+                    </div>
+                </div>
             </div >
         )
     }

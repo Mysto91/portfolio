@@ -1,5 +1,6 @@
 .horizontal-container {
-  background-color: #b7d2de;
+  /*background-color: #a3a3ff;*/
+  background: linear-gradient(#2980b9, #6dd5fa, #ffffff);
   opacity: 0.8;
   color: white;
 }

@@ -18,7 +18,7 @@ export default class Navigation extends Component {
                     <li><a className="responsive-link" href="#">Contact</a></li>
                     <li>
                         <a href="#" className="nav-icon" onClick={this.handleClick}>
-                            <i className="fa fa-bars fa-w-14 fa-3x"></i>
+                            <i className="fa fa-bars fa-w-14 fa-2x"></i>
                         </a>
                     </li>
                 </ul>

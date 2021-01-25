@@ -15,17 +15,56 @@
   filter: drop-shadow(0 0 0.75rem black);
 }
 
+.opacity-black {
+  background: rgb(0, 0, 0, 0.6);
+}
+
+.text-container {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+}
+
+.text-container > p {
+  color: white;
+  margin: auto;
+
+  font-size: 25px;
+}
+
+.profile-image {
+  grid-area: profile-image;
+}
+
+.profile-image > img {
+  height: auto;
+  border-radius: 50%;
+}
+
 @media screen and (min-width: 900px) {
   .presentation-container {
-    grid-template-areas: "text image";
+    grid-template-areas:
+      "text image"
+      "profile-image image";
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2fr;
+  }
+
+  .profile-image > img {
+    width: 200px;
   }
 }
 
 @media screen and (max-width: 900px) {
   .presentation-container {
     grid-template-areas:
+      "image"
       "text"
-      "image";
+      "profile-image";
+  }
+
+  .profile-image > img {
+    width: 100px;
   }
 }
