@@ -12,8 +12,10 @@ export default class Card extends Component {
 
         return (
             <div className="card">
+                <div className="image-container">
+                    <img src={`/images/${image}`}></img>
+                </div>
                 <h1>{title}</h1>
-                <div>{image}</div>
                 <p>{description}</p>
             </div>
         )

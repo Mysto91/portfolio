@@ -8,25 +8,26 @@ export default class HorizontalContainer extends Component {
 
         const cardList = [
             {
-                'title' : 'montitre',
-                'description' : 'madescription',
-                'image' : 'monimage'
+                'title' : "2013-2018",
+
+                'description' : `Ecole d'ingénieur généraliste 
+                dans laquelle j'ai pu découvrir l'ensemble des domaines de l'ingénierie.`,
+
+                'image' : '/logo/logo-insa-cvl-transparent.png'
             },
             {
-                'title' : 'montitre2',
-                'description' : 'madescription',
-                'image' : 'monimage'
-            },
-            {
-                'title' : 'montitre3',
-                'description' : 'madescription',
-                'image' : 'monimage'
+                'title' : '2017-2018',
+
+                'description' : `Formation Ecossaise 
+                    qui m'a enseigné les fondamentaux du développeur web.`,
+
+                'image' : '/logo/logo-university-of-dundee.png'
             }
         ];
 
         return (
             <div className="horizontal-container">
-                <h1>&lt;Mon parcours/&gt;</h1>
+                <h1>&lt;Mon parcours scolaire/&gt;</h1>
                 <CardList cardList={cardList} />
             </div>
         )

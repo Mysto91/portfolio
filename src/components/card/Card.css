@@ -1,3 +1,15 @@
+.card {
+    /*border : solid;*/
+    width: 350px;
+    margin: auto;
+    height: 400px;
+    color : rgb(36, 46, 66);
+}
+
+img {
+    width: 75%;
+    height: 75px;
+}
 
 @media screen and (min-width: 900px) {
     .card {
