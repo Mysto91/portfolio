@@ -10,9 +10,8 @@ export default class Presentation extends Component {
                         Bonjour et bienvenue !
                     </h1>
                     <p>
-                        Je m'appelle
-                        Etienne TRAN
-                        Je suis un ingénieur spécialisé dans le développement web
+                        Etienne TRAN,<br/>
+                        Ingénieur spécialisé dans le développement web
                     </p>
                 </div>
                 <div className="profile-image">
