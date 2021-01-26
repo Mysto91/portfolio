@@ -3,13 +3,22 @@ import './Navigation.css';
 
 export default class Navigation extends Component {
 
-    handleClick = () => {
-        console.log("gérer le clique");
+    constructor(props) {
+        super(props);
+        this.state = {
+            navClass: 'navigation'
+        };
+    }
+
+    handleClick = (event) => {
+        let navBar = document.getElementById('nav-bar');
+        alert("Mon menu responsive apparaît");
+
     }
 
     render() {
         return (
-            <div className="navigation">
+            <div id="nav-bar" className={this.state.navClass}>
                 <ul>
                     <li><a className="responsive-link active" href="#">Présentation</a></li>
                     <li><a className="responsive-link" href="#">Parcours</a></li>
