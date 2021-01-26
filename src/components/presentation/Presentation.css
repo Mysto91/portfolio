@@ -1,4 +1,5 @@
-h1 {}
+h1 {
+}
 
 .presentation-container {
   display: grid;
@@ -43,6 +44,7 @@ h1 {}
 .profile-image > img {
   height: auto;
   border-radius: 50%;
+  box-shadow: 0 30px 15px rgb(0, 0, 0, 0.2);
 }
 
 @media screen and (min-width: 900px) {
