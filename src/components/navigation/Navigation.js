@@ -11,26 +11,28 @@ export default class Navigation extends Component {
     }
 
     handleClick = (event) => {
-        let navBar = document.getElementById('nav-bar');
-        alert("Mon menu responsive apparaît");
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
 
     }
 
     render() {
         return (
             <div id="nav-bar" className={this.state.navClass}>
-                <ul>
-                    <li><a className="responsive-link active" href="#">Présentation</a></li>
-                    <li><a className="responsive-link" href="#">Parcours</a></li>
-                    <li><a className="responsive-link" href="#">Création</a></li>
-                    <li><a className="responsive-link" href="#">Github</a></li>
-                    <li><a className="responsive-link" href="#">Contact</a></li>
-                    <li>
-                        <a href="#" className="nav-icon" onClick={this.handleClick}>
-                            <i className="fa fa-bars fa-w-14 fa-2x"></i>
-                        </a>
-                    </li>
-                </ul>
+                <div className="topnav" id="myTopnav">
+                    <a href="#home" className="active">Présentation</a>
+                    <a href="#news">Parcours</a>
+                    <a href="#contact">Création</a>
+                    <a href="#github">Github</a>
+                    <a href="#about">Contact</a>
+                    <a id="icon" href="#" className="icon" onClick={this.handleClick}>
+                        <i className="fa fa-bars fa-2x"></i>
+                    </a>
+                </div>
             </div>
         )
     }

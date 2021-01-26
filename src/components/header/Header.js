@@ -8,7 +8,7 @@ export default class Header extends Component {
         return (
             <div className="container">
                 <div className="logo-container">
-                    <div className="logo">Etienne TRAN<br />Développeur web full stack</div>
+                    <div className="logo">Etienne TRAN</div>
                 </div>
                 <Navigation />
             </div>
