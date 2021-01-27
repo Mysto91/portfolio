@@ -3,20 +3,13 @@ h1 {
 }
 
 .horizontal-container {
-  /*background-color: #a3a3ff;*/
-  background: linear-gradient(#2980b9, #6dd5fa, #ffffff);
+  background: linear-gradient(#74b9ff, #ffffff);
   opacity: 0.8;
   color: white;
 }
 
 @media screen and (min-width: 900px) {
-  .horizontal-container {
-    height: 500px;
-  }
 }
 
 @media screen and (max-width: 900px) {
-  .horizontal-container {
-    height: 200px;
-  }
 }

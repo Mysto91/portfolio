@@ -76,5 +76,7 @@
 @media screen and (min-width: 900px) {
   .topnav a {
     margin-top: 15px;
+    border-radius: 10px;
+    margin-right: 5px;
   }
 }
