@@ -1,6 +1,20 @@
 h1 {
 }
 
+.wrap-image {
+  border-radius: 50%;
+  border: solid;
+  box-shadow: 0 30px 15px rgb(0, 0, 0, 0.2);
+
+  display: grid;
+  overflow: hidden;
+  margin: auto;
+}
+
+.wrap-image > img {
+  margin: auto;
+}
+
 .presentation-container {
   display: grid;
   height: 500px;
@@ -41,12 +55,6 @@ h1 {
   grid-area: profile-image;
 }
 
-.profile-image > img {
-  height: auto;
-  border-radius: 50%;
-  box-shadow: 0 30px 15px rgb(0, 0, 0, 0.2);
-}
-
 @media screen and (min-width: 900px) {
   .presentation-container {
     grid-template-areas:
@@ -56,8 +64,13 @@ h1 {
     grid-template-rows: 1fr 2fr;
   }
 
-  .profile-image > img {
-    width: 200px;
+  .wrap-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .wrap-image > img {
+    width: 300px;
   }
 }
 
@@ -69,7 +82,12 @@ h1 {
       "profile-image";
   }
 
-  .profile-image > img {
-    width: 100px;
+  .wrap-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .wrap-image > img {
+    width: 150px;
   }
 }

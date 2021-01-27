@@ -15,7 +15,9 @@ export default class Presentation extends Component {
                     </p>
                 </div>
                 <div className="profile-image">
-                    <img src="images/me.png"></img>
+                    <div className="wrap-image">
+                        <img src="images/me.png"></img>
+                    </div>
                 </div>
                 <div className="presentation-image">
                     <div className="text-container opacity-black">
