@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SmallCircularIcon from '../smallCircularIcon/SmallCircularIcon';
+import SmallCircularIconList from '../smallCircularIconList/SmallCircularIconList';
 import './Footer.css'
 
 export default class Footer extends Component {
@@ -21,9 +21,7 @@ export default class Footer extends Component {
             <footer>
                 <div className="footer-container">
                     <div className="footer-content">
-                        {
-                            this.state.iconList.map(icon => <SmallCircularIcon key={icon.title} {...icon} />)
-                        }
+                        <SmallCircularIconList iconList={this.state.iconList} />
                     </div>
                 </div>
                 <div className="footer-container">

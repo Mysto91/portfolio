@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Navigation.css';
-import NavigationLink from './navigationLink/NavigationLink';
+import NavigationLinkList from './navigationLinkList/NavigationLinkList';
 
 export default class Navigation extends Component {
 
@@ -8,12 +8,12 @@ export default class Navigation extends Component {
         super(props);
         this.state = {
             topNavClass: 'topnav',
-            menuList: [
-                { title: 'presentation', active: true, content: 'Présentation' },
-                { title: 'parcours', active: false, content: 'Parcours' },
-                { title: 'creation', active: false, content: 'Création' },
-                { title: 'github', active: false, content: 'Github' },
-                { title: 'contact', active: false, content: 'Contact' },
+            linkList: [
+                { title: 'presentation', active: true, content: 'Présentation', url: '' },
+                { title: 'parcours', active: false, content: 'Parcours', url: '' },
+                { title: 'creation', active: false, content: 'Création', url: '' },
+                { title: 'github', active: false, content: 'Github', url: '' },
+                { title: 'contact', active: false, content: 'Contact', url: '' },
             ]
         };
     }
@@ -26,9 +26,7 @@ export default class Navigation extends Component {
         return (
             <div id="nav-bar" className="navigation">
                 <div className={this.state.topNavClass} id="myTopnav">
-                    {
-                        this.state.menuList.map(link => <NavigationLink key={`link-${link.title}`} {...link} />)
-                    }
+                    <NavigationLinkList linkList={this.state.linkList} />
                     <a id="icon" href="#hamburger" className="icon" onClick={this.handleClick}>
                         <i className="fa fa-bars fa-2x"></i>
                     </a>

@@ -7,20 +7,20 @@ export default class HorizontalContainer extends Component {
 
         const cardList = [
             {
-                'title': "2013-2018",
+                title: "2013-2018",
 
-                'description': `Ecole d'ingénieur généraliste 
+                description: `Ecole d'ingénieur généraliste 
                 dans laquelle j'ai pu découvrir l'ensemble des domaines de l'ingénierie.`,
 
-                'image': '/logo/logo-insa-cvl.png'
+                image: '/logo/logo-insa-cvl.png'
             },
             {
-                'title': '2017-2018',
+                title: '2017-2018',
 
-                'description': `Formation Ecossaise 
+                description: `Formation Ecossaise 
                     qui m'a enseigné les fondamentaux du développeur web.`,
 
-                'image': '/logo/logo-university-of-dundee.png'
+                image: '/logo/logo-university-of-dundee.png'
             }
         ];
 
