@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Card from '../card/Card'
 import CardList from '../cardList/CardList';
 import './HorizontalContainer.css'
 

@@ -2,15 +2,14 @@ import React, { Component } from 'react'
 import './SmallCircularIcon.css'
 
 export default class SmallCircularIcon extends Component {
-
-    constructor(props) {
-        super(props);
-    }
     render() {
+
+        const { title, link } = this.props;
+
         return (
-            <a href="#">
+            <a href={link !== "" ? link : "#icon"}>
                 <div className="small-icon">
-                    <i className={this.props.name} aria-hidden="true"></i>
+                    <i className={title} aria-hidden="true"></i>
                 </div>
             </a>
         )

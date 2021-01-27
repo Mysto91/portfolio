@@ -19,12 +19,7 @@ export default class Navigation extends Component {
     }
 
     handleClick = (event) => {
-        this.setState((state) => {
-            if (state.topNavClass === 'topnav')
-                return { topNavClass: state.topNavClass + ' responsive' };
-            else
-                return { topNavClass: 'topnav' };
-        })
+        this.setState(state => state.topNavClass === 'topnav' ? { topNavClass: state.topNavClass + ' responsive' } : { topNavClass: 'topnav' })
     }
 
     render() {
@@ -34,7 +29,7 @@ export default class Navigation extends Component {
                     {
                         this.state.menuList.map(link => <NavigationLink key={`link-${link.title}`} {...link} />)
                     }
-                    <a id="icon" href="#" className="icon" onClick={this.handleClick}>
+                    <a id="icon" href="#hamburger" className="icon" onClick={this.handleClick}>
                         <i className="fa fa-bars fa-2x"></i>
                     </a>
                 </div>

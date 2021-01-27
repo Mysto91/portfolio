@@ -29,7 +29,7 @@ export default class Presentation extends Component {
                 </div>
                 <div className="profile-image">
                     <div className="wrap-image">
-                        <img src={profileImage} alt="image-profile"></img>
+                        <img src={profileImage} alt="profile"></img>
                     </div>
                 </div>
                 <div className="presentation-image" style={{ backgroundImage: `url('${laptopImage}')` }}>

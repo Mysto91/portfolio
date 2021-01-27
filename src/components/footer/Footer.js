@@ -8,10 +8,10 @@ export default class Footer extends Component {
         super(props);
         this.state = {
             iconList: [
-                { title: 'fa fa-facebook' },
-                { title: 'fa fa-linkedin' },
-                { title: 'fa fa-instagram' },
-                { title: 'fa fa-twitter' },
+                { title: 'fa fa-facebook', link: '' },
+                { title: 'fa fa-linkedin', link: '' },
+                { title: 'fa fa-instagram', link: '' },
+                { title: 'fa fa-twitter', link: '' },
             ]
         }
     }
@@ -22,7 +22,7 @@ export default class Footer extends Component {
                 <div className="footer-container">
                     <div className="footer-content">
                         {
-                            this.state.iconList.map(icon => <SmallCircularIcon key={icon.title} name={icon.title} />)
+                            this.state.iconList.map(icon => <SmallCircularIcon key={icon.title} {...icon} />)
                         }
                     </div>
                 </div>
