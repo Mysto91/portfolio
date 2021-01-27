@@ -41,6 +41,7 @@
     display: none;
   }
   .topnav a.icon {
+    margin-top: 5px;
     float: right;
     display: block;
   }
