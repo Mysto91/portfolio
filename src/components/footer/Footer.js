@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SmallCircularIconList from '../smallCircularIconList/SmallCircularIconList';
 import './Footer.css'
+import smallCircularLink from './smallCircularLink';
 
 export default class Footer extends Component {
 
@@ -8,10 +9,10 @@ export default class Footer extends Component {
         super(props);
         this.state = {
             iconList: [
-                { title: 'fa fa-facebook', link: '' },
-                { title: 'fa fa-linkedin', link: '' },
-                { title: 'fa fa-instagram', link: '' },
-                { title: 'fa fa-twitter', link: '' },
+                new smallCircularLink('fa fa-facebook', ''),
+                new smallCircularLink('fa fa-linkedin', ''),
+                new smallCircularLink('fa fa-instagram', ''),
+                new smallCircularLink('fa fa-twitter', '')
             ]
         }
     }

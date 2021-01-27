@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import menuLink from './menuLink';
 import './Navigation.css';
 import NavigationLinkList from './navigationLinkList/NavigationLinkList';
 
@@ -9,11 +10,11 @@ export default class Navigation extends Component {
         this.state = {
             topNavClass: 'topnav',
             linkList: [
-                { title: 'presentation', active: true, content: 'Présentation', url: '' },
-                { title: 'parcours', active: false, content: 'Parcours', url: '' },
-                { title: 'creation', active: false, content: 'Création', url: '' },
-                { title: 'github', active: false, content: 'Github', url: '' },
-                { title: 'contact', active: false, content: 'Contact', url: '' },
+                new menuLink('presentation', 'Présentation', '', true),
+                new menuLink('parcours', 'Parcours', ''),
+                new menuLink('creation', 'Création', ''),
+                new menuLink('github', 'Github', ''),
+                new menuLink('contact', 'Contact', '')
             ]
         };
     }
