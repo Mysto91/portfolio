@@ -4,10 +4,9 @@ import './SmallCircularIcon.css'
 export default class SmallCircularIcon extends Component {
     render() {
 
-        const { title, link } = this.props;
-
+        const { title, url } = this.props;
         return (
-            <a href={link !== "" ? link : "#icon"}>
+            <a href={url !== "" ? url : "#icon"}>
                 <div className="small-icon">
                     <i className={title} aria-hidden="true"></i>
                 </div>

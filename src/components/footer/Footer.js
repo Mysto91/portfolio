@@ -10,7 +10,7 @@ export default class Footer extends Component {
         this.state = {
             iconList: [
                 new smallCircularLink('fa fa-facebook', ''),
-                new smallCircularLink('fa fa-linkedin', ''),
+                new smallCircularLink('fa fa-linkedin', 'https://www.linkedin.com/in/etienne-tran-5468a2118'),
                 new smallCircularLink('fa fa-instagram', ''),
                 new smallCircularLink('fa fa-twitter', '')
             ]

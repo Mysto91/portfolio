@@ -13,7 +13,7 @@ export default class Navigation extends Component {
                 new menuLink('presentation', 'Présentation', '', true),
                 new menuLink('parcours', 'Parcours', ''),
                 new menuLink('creation', 'Création', ''),
-                new menuLink('github', 'Github', ''),
+                new menuLink('github', 'Github', 'https://github.com/Mysto91/portfolio'),
                 new menuLink('contact', 'Contact', '')
             ]
         };
