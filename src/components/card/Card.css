@@ -46,4 +46,8 @@
     margin: auto;
     margin-bottom: 10px;
   }
+
+  .badge-container {
+    display: none;
+  }
 }

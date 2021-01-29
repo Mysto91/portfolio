@@ -6,8 +6,8 @@ export default class CardList extends Component {
     return (
       <div>
         {
-                    this.props.cardList.map(card => <Card key={`card-${card.title}`} {...card} />)
-                }
+          this.props.cardList.map(card => <Card key={`card-${card.title}`} {...card} />)
+        }
       </div>
     )
   }
