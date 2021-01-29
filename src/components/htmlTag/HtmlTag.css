@@ -3,6 +3,10 @@ p {
   display: inline-block;
 }
 
+.tag-content > p {
+  color: #1dd1a1;
+}
+
 .tag-container {
   display: grid;
 }
