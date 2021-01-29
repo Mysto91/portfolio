@@ -19,11 +19,10 @@ export default class Presentation extends Component {
       <div className='presentation-container'>
         <div className='presentation-text'>
           <h1>
-            Bonjour et bienvenue !
+            ETIENNE TRAN
           </h1>
           <p>
-            Etienne TRAN,<br />
-            Ingénieur spécialisé dans le développement web
+            Ingénieur dans le développement web
           </p>
         </div>
         <div className='profile-image'>
