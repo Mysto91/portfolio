@@ -2,12 +2,11 @@ import React, { Component } from 'react'
 import './NavigationLink.css'
 
 export default class NavigationLink extends Component {
-    render() {
+  render () {
+    const { title, active, content, url } = this.props
 
-        const { title, active, content, url } = this.props;
-
-        return (
-            <a href={url !== "" ? url : `#${title}`} className={active ? 'active' : ''}>{content}</a>
-        )
-    }
+    return (
+      <a href={url !== '' ? url : `#${title}`} className={active ? 'active' : ''}>{content}</a>
+    )
+  }
 }
