@@ -30,7 +30,7 @@
 .presentation-image {
   grid-area: image;
   background-size: cover;
-  filter: drop-shadow(0 0 0.75rem black);
+  /*filter: drop-shadow(0 0 0.75rem black);*/
 }
 
 .opacity-black {
