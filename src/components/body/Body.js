@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import card from '../../class/card'
+import Card from '../../class/Card'
 import HorizontalContainer from '../horizontalContainer/HorizontalContainer'
 import Presentation from '../presentation/Presentation'
 import './Body.css'
@@ -7,12 +7,12 @@ import './Body.css'
 export default class Body extends Component {
   render () {
     const cardList = [
-      new card(
+      new Card(
         '2013-2018',
         'Ecole d\'ingénieur généraliste dans laquelle j\'ai pu découvrir l\'ensemble des domaines de l\'ingénierie.',
         '/logo/logo-insa-cvl.png'
       ),
-      new card(
+      new Card(
         '2017-2018',
         'Formation Ecossaise qui m\'a enseigné les fondamentaux du développeur web.',
         '/logo/logo-university-of-dundee.png'
@@ -20,7 +20,7 @@ export default class Body extends Component {
     ]
 
     const cardList2 = [
-      new card(
+      new Card(
         '2018-aujourd\'hui',
         'Orange Business Services',
         '/logo/logo-obs.png'

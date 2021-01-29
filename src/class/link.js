@@ -1,4 +1,4 @@
-export default class link {
+export default class Link {
   constructor (url) {
     this.url = url
   }

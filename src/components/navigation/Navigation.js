@@ -19,7 +19,7 @@ export default class Navigation extends Component {
         };
     }
 
-    handleClick = (event) => {
+    handleClick = event => {
         this.setState(state => state.topNavClass === 'topnav' ? { topNavClass: state.topNavClass + ' responsive' } : { topNavClass: 'topnav' })
     }
 

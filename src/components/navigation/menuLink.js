@@ -1,6 +1,6 @@
-import link from '../../class/link'
+import Link from '../../class/Link'
 
-export default class menuLink extends link {
+export default class menuLink extends Link {
   constructor (title, content, url, active = false) {
     super(url)
     this.title = title

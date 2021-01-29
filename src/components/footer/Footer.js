@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 import SmallCircularIconList from '../smallCircularIconList/SmallCircularIconList'
 import './Footer.css'
-import smallCircularLink from './smallCircularLink'
+import SmallCircularLink from './SmallCircularLink'
 
 export default class Footer extends Component {
   constructor (props) {
     super(props)
     this.state = {
       iconList: [
-        new smallCircularLink('fa fa-facebook', ''),
-        new smallCircularLink('fa fa-linkedin', 'https://www.linkedin.com/in/etienne-tran-5468a2118'),
-        new smallCircularLink('fa fa-instagram', ''),
-        new smallCircularLink('fa fa-twitter', '')
+        new SmallCircularLink('fa fa-facebook', ''),
+        new SmallCircularLink('fa fa-linkedin', 'https://www.linkedin.com/in/etienne-tran-5468a2118'),
+        new SmallCircularLink('fa fa-instagram', ''),
+        new SmallCircularLink('fa fa-twitter', '')
       ]
     }
   }
