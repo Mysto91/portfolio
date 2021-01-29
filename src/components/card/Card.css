@@ -50,4 +50,8 @@
   .badge-container {
     display: none;
   }
+
+  .card:hover {
+    height: 400px;
+  }
 }
