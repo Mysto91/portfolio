@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import HtmlTag from '../htmlTag/HtmlTag'
 import './Presentation.css'
 
 export default class Presentation extends Component {
@@ -32,7 +33,7 @@ export default class Presentation extends Component {
         </div>
         <div className='presentation-image' style={{ backgroundImage: `url('${laptopImage}')` }}>
           <div className='text-container opacity-black'>
-            <p>&lt;Présentation/&gt;</p>
+            <HtmlTag content='Présentation' />
           </div>
         </div>
       </div>

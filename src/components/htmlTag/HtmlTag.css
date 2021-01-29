@@ -1,0 +1,19 @@
+.tag-content > div,
+p {
+  display: inline-block;
+}
+
+.tag-container {
+  display: grid;
+}
+
+.tag-content {
+  margin: auto;
+  color: white;
+  font-size: 30px;
+  text-shadow: #5758bb 1px 0 10px;
+}
+
+.tag-content > div {
+  color: #5758bb;
+}
