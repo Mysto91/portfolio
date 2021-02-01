@@ -5,7 +5,7 @@ import Presentation from '../presentation/Presentation'
 import './Body.css'
 
 export default class Body extends Component {
-  render() {
+  render () {
     return (
       <div>
         <Presentation />
