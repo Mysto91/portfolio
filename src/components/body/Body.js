@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
+import { experienceCardList, formationCardList } from '../../data/data'
 import HorizontalContainer from '../horizontalContainer/HorizontalContainer'
 import Presentation from '../presentation/Presentation'
 import './Body.css'
-import { formationCardList } from '../../data/parcoursScolaire'
-import { experienceCardList } from '../../data/parcoursProfessionnel'
 
 export default class Body extends Component {
-  render () {
+  render() {
     return (
       <div>
         <Presentation />
