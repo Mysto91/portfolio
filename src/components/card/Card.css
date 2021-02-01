@@ -5,7 +5,7 @@
   word-wrap: break-word;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 10px;
-  background-color: #2a265f;
+  background-color: #2d3436;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   color: white;
 
@@ -27,7 +27,7 @@
 }
 
 .image-container {
-  background-color: white;
+  background-color: #2d3436;
   border-radius: 10px 10px 0 0;
 }
 
