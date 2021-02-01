@@ -1,0 +1,33 @@
+[
+    {
+        "title": "2018-aujourd'hui (plus de 2 ans)",
+        "description": "Orange Business Services",
+        "image": "/logo/logo-obs.png",
+        "badgeList" : [
+            {
+                "title": "php",
+                "color": "#34495e"
+            },
+            {
+                "title": "laravel",
+                "color": "#e74c3c"
+            },
+            {
+                "title": "zend",
+                "color": "#2ecc71"
+            },
+            {
+                "title": "javascript",
+                "color": "#f1c40f"
+            },
+            {
+                "title": "agilité",
+                "color": "#8e44ad"
+            },
+            {
+                "title": "api",
+                "color": "#e67e22"
+            }
+        ]
+    }
+]  

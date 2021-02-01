@@ -1,0 +1,52 @@
+[
+    {
+        "title": "2013-2018",
+        "description": "Formation d'ingénieur généraliste dans laquelle j'ai pu découvrir l'ensemble des domaines de l'ingénierie.",
+        "image": "/logo/logo-insa-cvl.png",
+        "badgeList" : [
+            {
+                "title": "Maths",
+                "color": "#1abc9c"
+            },
+            {
+                "title": "Physique",
+                "color": "#34495e"
+            },
+            {
+                "title": "Électronique",
+                "color": "#e67e22"
+            },
+            {
+                "title": "Mécanique",
+                "color": "#8e44ad"
+            }
+        ]
+    },
+    {
+        "title": "2017-2018",
+        "description": "Formation Écossaise qui m'a enseigné les fondamentaux du développeur web.",
+        "image": "/logo/logo-insa-cvl.png",
+        "badgeList" : [
+            {
+                "title": "php",
+                "color": "#34495e"
+            },
+            {
+                "title": "html",
+                "color": "#e67e22"
+            },
+            {
+                "title": "css",
+                "color": "#3498db"
+            },
+            {
+                "title": "javascript",
+                "color": "#f1c40f"
+            },
+            {
+                "title": "mysql",
+                "color": "#487eb0"
+            }
+        ]
+    }
+]  
