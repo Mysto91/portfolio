@@ -3,7 +3,7 @@ import HtmlTag from '../htmlTag/HtmlTag'
 import './Presentation.css'
 
 export default class Presentation extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
 
     this.state = {
@@ -11,7 +11,7 @@ export default class Presentation extends Component {
     }
   }
 
-  render () {
+  render() {
     const profileImage = './images/me.png'
     const laptopImage = './images/laptop.jpg'
 
@@ -32,7 +32,7 @@ export default class Presentation extends Component {
         </div>
         <div className='presentation-image' style={{ backgroundImage: `url('${laptopImage}')` }}>
           <div className='text-container opacity-black'>
-            <HtmlTag content='Présentation' />
+            <HtmlTag content='PRÉSENTATION' />
           </div>
         </div>
       </div>
