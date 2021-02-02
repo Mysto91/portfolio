@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ProgressBar from '../progressBar/ProgressBar'
 import './ProgressBarList.css'
 
-export default class RowList extends Component {
+export default class ProgressBarList extends Component {
   render () {
     const { list } = this.props
     return (
