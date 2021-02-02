@@ -3,10 +3,11 @@ import Card from '../card/Card'
 
 export default class CardList extends Component {
   render () {
+    const cardList = this.props.cardList
     return (
       <div>
         {
-          this.props.cardList.map(card => <Card key={`card-${card.title}`} {...card} />)
+          Array.isArray(cardList) && cardList.map(card => <Card key={`card-${card.title}`} {...card} />)
         }
       </div>
     )

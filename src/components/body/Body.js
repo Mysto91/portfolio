@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { experienceCardList, formationCardList } from '../../data/data'
+import { experienceCardList, formationCardList, skillLanguageList } from '../../data/data'
 import HorizontalContainer from '../horizontalContainer/HorizontalContainer'
 import Presentation from '../presentation/Presentation'
+import SkillContainer from '../skillContainer/SkillContainer'
 import './Body.css'
 
 export default class Body extends Component {
@@ -9,8 +10,9 @@ export default class Body extends Component {
     return (
       <div>
         <Presentation />
-        <HorizontalContainer title='Mon parcours scolaire' cardList={formationCardList} background='linear-gradient(#74b9ff, #ffffff)' />
-        <HorizontalContainer title='Mon parcours professionnel' cardList={experienceCardList} background='white' />
+        <SkillContainer title='MES COMPÉTENCES' progressBarList={skillLanguageList} background='#ecf0f1' />
+        <HorizontalContainer title='MON PARCOURS SCOLAIRE' cardList={formationCardList} background='linear-gradient(#74b9ff, #ffffff)' />
+        <HorizontalContainer title='MON PARCOURS PROFESSIONNEL' cardList={experienceCardList} background='white' />
       </div>
     )
   }

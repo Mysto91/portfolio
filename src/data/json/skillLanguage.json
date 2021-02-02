@@ -1,0 +1,18 @@
+[
+    {
+        "title" : "php",
+        "level" : 0.9
+    },
+    {
+        "title" : "javascript",
+        "level" : 0.75
+    },
+    {
+        "title" : "sql",
+        "level" : 0.8
+    },
+    {
+        "title" : "html/css",
+        "level" : 0.7
+    }
+]

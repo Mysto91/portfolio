@@ -1,5 +1,6 @@
 import Badge from '../class/Badge'
 import Card from '../class/Card'
+import Row from '../class/Row'
 
 /**
  * Convert json data into cards list
@@ -15,7 +16,16 @@ export const getCardList = (json) => {
       card.title,
       card.description,
       card.image,
-      card.badgeList.map((badge) => new Badge(badge.title, badge.color))
+      Array.isArray(card.badgeList) ? card.badgeList.map((badge) => new Badge(badge.title, badge.color)) : []
     )
   )
+}
+
+export const getRowList = (json) => {
+  return json.map((row) => {
+    return new Row(
+      row.title,
+      row.level
+    )
+  })
 }
