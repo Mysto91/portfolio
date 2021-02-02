@@ -1,6 +1,7 @@
 import Badge from '../class/Badge'
 import Card from '../class/Card'
 import Row from '../class/Row'
+import MenuLink from '../components/navigation/MenuLink'
 
 /**
  * Convert json data into cards list
@@ -26,6 +27,17 @@ export const getRowList = (json) => {
     return new Row(
       row.title,
       row.level
+    )
+  })
+}
+
+export const getMenuLinkList = (json) => {
+  return json.map((link) => {
+    return new MenuLink(
+      link.title,
+      link.description,
+      link.url,
+      link.active
     )
   })
 }

@@ -7,7 +7,7 @@ export default class NavigationLinkList extends Component {
 
     return (
       <div>
-        {linkList.map(link => <NavigationLink key={`link-${link.title}`} {...link} />)}
+        {Array.isArray(linkList) && linkList.map(link => <NavigationLink key={`link-${link.title}`} {...link} />)}
       </div>
     )
   }
