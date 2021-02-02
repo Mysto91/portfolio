@@ -5,9 +5,8 @@
   word-wrap: break-word;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 10px;
-  background-color: #2d3436;
+  background-color: #dfe6e9;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-  color: white;
 
   margin-bottom: 10px;
 }
@@ -17,7 +16,7 @@
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 #5758bb;
+  box-shadow: 0 8px 16px 0 rgb(36, 46, 66);
 }
 
 .image-container > img {
@@ -27,7 +26,7 @@
 }
 
 .image-container {
-  background-color: #2d3436;
+  background-color: #b2bec3;
   border-radius: 10px 10px 0 0;
 }
 
