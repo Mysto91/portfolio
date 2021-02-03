@@ -1,0 +1,38 @@
+.skill-container {
+  color: white;
+  display: grid;
+}
+
+.skill-title-container {
+  grid-area: title;
+}
+
+.bullet-container {
+  grid-area: bullet-list;
+}
+
+.progress-bar-container {
+  grid-area: progress-bar-list;
+}
+
+h2 {
+  color: rgb(36, 46, 66);
+}
+
+@media screen and (min-width: 900px) {
+  .skill-container {
+    grid-template-areas:
+      "title title"
+      "bullet-list progress-bar-list";
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .skill-container {
+    grid-template-areas:
+      "image"
+      "text"
+      "profile-image";
+  }
+}

@@ -5,11 +5,16 @@ import './HorizontalContainer.css'
 
 export default class HorizontalContainer extends Component {
   render () {
-    const { title, cardList, background } = this.props
+    const { title, cardList, background, color } = this.props
     return (
-      <div className='horizontal-container' style={{ background: background !== '' ? background : ' #f4fefe' }}>
+      <div
+        className='horizontal-container' style={{
+          background: background !== '' ? background : ' #f4fefe',
+          color: color !== '' ? color : 'white'
+        }}
+      >
         <h1>
-          <HtmlTag content={title} />
+          <HtmlTag content={title} color={color} />
         </h1>
         <CardList cardList={cardList} />
       </div>

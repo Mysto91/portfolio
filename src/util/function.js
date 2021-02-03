@@ -1,4 +1,5 @@
 import Badge from '../class/Badge'
+import Bullet from '../class/Bullet'
 import Card from '../class/Card'
 import Row from '../class/Row'
 import MenuLink from '../components/navigation/MenuLink'
@@ -10,8 +11,8 @@ import MenuLink from '../components/navigation/MenuLink'
  *
  * @return array
  */
-export const getCardList = (json) => {
-  return json.map((card) =>
+export const getCardList = (json) =>
+  json.map((card) =>
     new Card
     (
       card.title,
@@ -20,24 +21,30 @@ export const getCardList = (json) => {
       Array.isArray(card.badgeList) ? card.badgeList.map((badge) => new Badge(badge.title, badge.color)) : []
     )
   )
-}
 
-export const getRowList = (json) => {
-  return json.map((row) => {
-    return new Row(
+export const getRowList = (json) =>
+  json.map((row) =>
+    new Row(
       row.title,
       row.level
     )
-  })
-}
+  )
 
-export const getMenuLinkList = (json) => {
-  return json.map((link) => {
-    return new MenuLink(
+export const getMenuLinkList = (json) =>
+  json.map((link) =>
+    new MenuLink(
       link.title,
       link.description,
       link.url,
       link.active
     )
-  })
-}
+  )
+
+export const getBulletList = (json) =>
+  json.map((bullet) =>
+    new Bullet(
+      bullet.title,
+      bullet.description,
+      bullet.version
+    )
+  )

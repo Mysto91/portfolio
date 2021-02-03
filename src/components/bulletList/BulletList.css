@@ -1,0 +1,4 @@
+.bullet-container {
+  grid-area: bullet-list;
+  color: rgb(36, 46, 66);
+}

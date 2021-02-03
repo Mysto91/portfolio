@@ -1,0 +1,22 @@
+[
+    {
+        "title" : "Laravel",
+        "version" : "5.8/8",
+        "description" : "Développement d'apis pour Orange (2 ans)"
+    },
+    {
+        "title" : "JQuery",
+        "version" : "3.5.1",
+        "description" : "Développement des parties dynamiques du frontal (2 ans)"
+    },
+    {
+        "title" : "React",
+        "version" : "16.13",
+        "description" : "Développement du portfolio en apprentissage autodidacte"
+    },
+    {
+        "title" : "Symfony",
+        "version" : "5.0",
+        "description" : "Développement d'apis en apprentissage autodidacte"
+    }
+]

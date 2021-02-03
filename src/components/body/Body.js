@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { experienceCardList, formationCardList, skillLanguageList } from '../../data/data'
+import { experienceCardList, formationCardList } from '../../data/data'
 import HorizontalContainer from '../horizontalContainer/HorizontalContainer'
 import Presentation from '../presentation/Presentation'
 import SkillContainer from '../skillContainer/SkillContainer'
@@ -10,8 +10,8 @@ export default class Body extends Component {
     return (
       <div>
         <Presentation />
-        <SkillContainer title='MES COMPÉTENCES' progressBarList={skillLanguageList} background='#ecf0f1' />
-        <HorizontalContainer title='MON PARCOURS SCOLAIRE' cardList={formationCardList} background='linear-gradient(#74b9ff, #ffffff)' />
+        <SkillContainer title='MES COMPÉTENCES' />
+        <HorizontalContainer title='MON PARCOURS SCOLAIRE' cardList={formationCardList} background='#74b9ff' color='white' />
         <HorizontalContainer title='MON PARCOURS PROFESSIONNEL' cardList={experienceCardList} background='white' />
       </div>
     )

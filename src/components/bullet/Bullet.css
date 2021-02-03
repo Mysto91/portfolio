@@ -1,0 +1,11 @@
+.bullet-title-container > h3,
+.bullet-title-container > div {
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.bullet-container > p {
+  opacity: 0.7;
+  font-style: italic;
+}
