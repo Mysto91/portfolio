@@ -4,8 +4,7 @@
 }
 
 @media screen and (min-width: 900px) {
-  .drop-list {
-    visibility: collapse;
+  #droplist-framework-btn {
     display: none;
   }
 }

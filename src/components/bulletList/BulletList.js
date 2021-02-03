@@ -20,7 +20,7 @@ export default class BulletList extends Component {
         return (
             <div className='bullet-container'>
                 <h2>{title}</h2>
-                <div className='fa fa-angle-down fa-w-10 fa-5x drop-list' onClick={this.handleClickDropList} />
+                <div id='droplist-framework-btn' className='fa fa-angle-down fa-w-10 fa-5x drop-list' onClick={this.handleClickDropList} />
                 <div className={this.state.bulletListClass}>
                     {
                         Array.isArray(list) && list.map((bullet) => <Bullet key={bullet.title} {...bullet} />)

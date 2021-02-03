@@ -1,4 +1,5 @@
 .meter {
+  color: white;
   box-sizing: content-box;
   height: 20px; /* Can be anything */
   position: relative;
