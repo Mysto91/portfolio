@@ -31,8 +31,8 @@ h2 {
 @media screen and (max-width: 900px) {
   .skill-container {
     grid-template-areas:
-      "image"
-      "text"
-      "profile-image";
+      "title"
+      "bullet-list"
+      "progress-bar-list";
   }
 }

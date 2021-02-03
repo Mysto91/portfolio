@@ -16,7 +16,7 @@ export default class SkillContainer extends Component {
             <HtmlTag content={title} />
           </h1>
         </div>
-        <BulletList list={frameworkBulletList} />
+        <BulletList title='Frameworks' list={frameworkBulletList} />
         <ProgressBarList list={skillLanguageList} />
       </div>
     )

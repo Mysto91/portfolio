@@ -3,15 +3,30 @@ import Bullet from '../bullet/Bullet'
 import './BulletList.css'
 
 export default class BulletList extends Component {
-  render () {
-    const { list } = this.props
-    return (
-      <div className='bullet-container'>
-        <h2>Frameworks</h2>
-        {
-                    Array.isArray(list) && list.map((bullet) => <Bullet key={bullet.title} {...bullet} />)
-                }
-      </div>
-    )
-  }
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            bulletListClass: 'bullet-list'
+        };
+    }
+
+    handleClickDropList = (event) => {
+        this.setState(state => state.bulletListClass === 'bullet-list' ? { bulletListClass: state.bulletListClass + ' responsive' } : { bulletListClass: 'bullet-list' })
+    }
+
+    render() {
+        const { list, title } = this.props
+        return (
+            <div className='bullet-container'>
+                <h2>{title}</h2>
+                <div className='fa fa-angle-down fa-w-10 fa-5x drop-list' onClick={this.handleClickDropList} />
+                <div className={this.state.bulletListClass}>
+                    {
+                        Array.isArray(list) && list.map((bullet) => <Bullet key={bullet.title} {...bullet} />)
+                    }
+                </div>
+            </div>
+        )
+    }
 }
