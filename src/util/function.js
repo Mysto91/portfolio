@@ -34,6 +34,7 @@ export const getMenuLinkList = (json) =>
   json.map((link) =>
     new MenuLink(
       link.title,
+      link.logo,
       link.description,
       link.url,
       link.active

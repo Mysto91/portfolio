@@ -1,0 +1,12 @@
+@media screen and (max-width: 900px) {
+  .icon-link {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .icon-link {
+    display: none !important;
+  }
+}

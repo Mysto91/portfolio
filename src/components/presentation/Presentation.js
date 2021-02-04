@@ -14,10 +14,11 @@ export default class Presentation extends Component {
   render () {
     const profileImage = './images/me.png'
     const laptopImage = './images/laptop.jpg'
+    const backgroundImage = './images/frame-background.jpg'
 
     return (
-      <div className='presentation-container'>
-        <div className='presentation-text'>
+      <div className='presentation-container' style={{ backgroundImage: `url('${backgroundImage}')` }}>
+        <div className='presentation-text filter-low'>
           <h1>
             ETIENNE TRAN
           </h1>
@@ -25,14 +26,14 @@ export default class Presentation extends Component {
             Ingénieur dans le développement web
           </p>
         </div>
-        <div className='profile-image'>
+        <div className='profile-image filter-low'>
           <div className='wrap-image'>
             <img src={profileImage} alt='profile' />
           </div>
         </div>
         <div className='presentation-image' style={{ backgroundImage: `url('${laptopImage}')` }}>
           <div className='text-container opacity-black'>
-            <HtmlTag content='PRÉSENTATION' />
+            <HtmlTag content='HELLO WORLD' />
           </div>
         </div>
       </div>

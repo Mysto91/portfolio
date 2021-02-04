@@ -24,7 +24,7 @@ export default class Navigation extends Component {
                     <NavigationLinkList linkList={this.state.linkList} />
                 </div>
                 <a id="icon" href="#hamburger" className="icon" onClick={this.handleClick}>
-                    <div style={{ width: '100px', height: '100%' }}>
+                    <div>
                         <i style={{ marginTop: '20px' }} className="fa fa-bars fa-2x"></i>
                     </div>
                 </a>
