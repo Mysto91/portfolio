@@ -1,0 +1,25 @@
+.drop-list-container {
+  color: rgb(36, 46, 66);
+}
+
+@media screen and (min-width: 900px) {
+  .drop-list {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .list {
+    transition: all 0.3s ease;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .drop-list {
+    cursor: pointer;
+  }
+}
+
+.responsive {
+  height: 500px;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { frameworkBulletList, skillLanguageList } from '../../data/data'
 import BulletList from '../bulletList/BulletList'
+import DropListContainer from '../dropListContainer/DropListContainer'
 import HtmlTag from '../htmlTag/HtmlTag'
 import ProgressBarList from '../progressBarList/ProgressBarList'
 import './SkillContainer.css'
@@ -16,8 +17,8 @@ export default class SkillContainer extends Component {
             <HtmlTag content={title} />
           </h1>
         </div>
-        <BulletList title='Frameworks' list={frameworkBulletList} />
-        <ProgressBarList list={skillLanguageList} />
+        <DropListContainer title='Frameworks' content={<BulletList title='Frameworks' list={frameworkBulletList} />} />
+        <DropListContainer title='Langages' content={<ProgressBarList list={skillLanguageList} />} />
       </div>
     )
   }
