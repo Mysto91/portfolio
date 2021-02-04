@@ -22,10 +22,12 @@ export default class Navigation extends Component {
             <div id="nav-bar" className="navigation">
                 <div className={this.state.topNavClass} id="myTopnav">
                     <NavigationLinkList linkList={this.state.linkList} />
-                    <a id="icon" href="#hamburger" className="icon" onClick={this.handleClick}>
-                        <i className="fa fa-bars fa-2x"></i>
-                    </a>
                 </div>
+                <a id="icon" href="#hamburger" className="icon" onClick={this.handleClick}>
+                    <div style={{ width: '100px', height: '100%' }}>
+                        <i style={{ marginTop: '20px' }} className="fa fa-bars fa-2x"></i>
+                    </div>
+                </a>
             </div>
         )
     }

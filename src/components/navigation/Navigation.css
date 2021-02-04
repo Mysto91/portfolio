@@ -5,7 +5,8 @@
 
 .topnav {
   overflow: hidden;
-  z-index: 30;
+  transition: all 0.3s linear;
+  /*z-index: 30;*/
 }
 
 .topnav a {
@@ -16,8 +17,6 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-
-  opacity: 0.9;
 
   transition: all 0.5s ease-in-out;
 }
@@ -49,12 +48,14 @@
 
 @media screen and (max-width: 900px) {
   .topnav.responsive {
+    margin-top: 60px;
     position: relative;
   }
-  .topnav.responsive .icon {
+  .navigation .icon {
+    color: white;
     position: absolute;
     right: 0;
-    top: 0;
+    height: 75px;
   }
   .topnav.responsive a {
     float: none;
@@ -78,7 +79,13 @@
 @media screen and (min-width: 900px) {
   .topnav a {
     margin-top: 15px;
-    border-radius: 10px;
-    margin-right: 5px;
+    border: solid white 1px;
+    border-radius: 50px;
+    margin-right: 10px;
+    width: 110px;
+  }
+
+  .icon {
+    display: none;
   }
 }
