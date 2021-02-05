@@ -3,15 +3,26 @@ import HtmlTag from '../htmlTag/HtmlTag'
 import './Presentation.css'
 
 export default class Presentation extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
 
     this.state = {
-
+      tagMsg: ''
     }
   }
 
-  render () {
+  showMsg = (msg, interval, index = 0) => {
+    if (index < msg.length) {
+      this.setState({ tagMsg: this.state.tagMsg + msg[index++] });
+      setTimeout(() => this.showMsg(msg, interval, index), interval);
+    }
+  }
+
+  componentDidMount() {
+    this.showMsg("HELLO WORLD", 50);
+  }
+
+  render() {
     const profileImage = './images/me.png'
     const backgroundImage = './images/triangle-background.jpg'
 
@@ -32,7 +43,7 @@ export default class Presentation extends Component {
         </div>
         <div className='presentation-image'>
           <div className='text-container filter-medium'>
-            <HtmlTag content='HELLO WORLD' />
+            <HtmlTag content={this.state.tagMsg} />
           </div>
         </div>
       </div>
