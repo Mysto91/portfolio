@@ -8,6 +8,7 @@ export default class HorizontalContainer extends Component {
     const { title, cardList, background, color } = this.props
     return (
       <div
+        id='id-parcours'
         className='horizontal-container' style={{
           background: background !== '' ? background : ' #f4fefe',
           color: color !== '' ? color : 'white'

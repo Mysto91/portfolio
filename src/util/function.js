@@ -12,40 +12,49 @@ import MenuLink from '../components/navigation/MenuLink'
  * @return array
  */
 export const getCardList = (json) =>
-  json.map((card) =>
-    new Card
-    (
-      card.title,
-      card.description,
-      card.image,
-      Array.isArray(card.badgeList) ? card.badgeList.map((badge) => new Badge(badge.title, badge.color)) : []
-    )
+  json.map(
+    (card) =>
+      new Card(
+        card.title,
+        card.description,
+        card.image,
+        Array.isArray(card.badgeList)
+          ? card.badgeList.map((badge) => new Badge(badge.title, badge.color))
+          : []
+      )
   )
 
 export const getRowList = (json) =>
-  json.map((row) =>
-    new Row(
-      row.title,
-      row.level
-    )
-  )
+  json.map((row) => new Row(row.title, row.level))
 
 export const getMenuLinkList = (json) =>
-  json.map((link) =>
-    new MenuLink(
-      link.title,
-      link.logo,
-      link.description,
-      link.url,
-      link.active
-    )
+  json.map(
+    (link) =>
+      new MenuLink(
+        link.title,
+        link.logo,
+        link.description,
+        link.url,
+        link.active
+      )
   )
 
 export const getBulletList = (json) =>
-  json.map((bullet) =>
-    new Bullet(
-      bullet.title,
-      bullet.description,
-      bullet.version
-    )
+  json.map(
+    (bullet) => new Bullet(bullet.title, bullet.description, bullet.version)
   )
+
+export const scroll = (elementClicked) => {
+  const href = elementClicked.getAttribute('href')
+
+  const link = href.includes('#') ? href.replace('#', '') : null
+
+  const targetScroll = document.getElementById('id-' + link)
+
+  if (targetScroll) {
+    targetScroll.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  }
+}

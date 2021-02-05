@@ -18,7 +18,7 @@ export default class Footer extends Component {
 
   render () {
     return (
-      <footer>
+      <footer id='id-contact'>
         <div className='footer-container'>
           <div className='footer-content'>
             <SmallCircularIconList iconList={this.state.iconList} />
