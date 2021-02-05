@@ -19,7 +19,7 @@ export default class Presentation extends Component {
   }
 
   componentDidMount() {
-    this.showMsg("HELLO WORLD", 50);
+    this.showMsg("HELLO WORLD", 100);
   }
 
   render() {
