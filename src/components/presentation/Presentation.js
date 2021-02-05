@@ -13,8 +13,7 @@ export default class Presentation extends Component {
 
   render () {
     const profileImage = './images/me.png'
-    const laptopImage = './images/laptop.jpg'
-    const backgroundImage = './images/frame-background.jpg'
+    const backgroundImage = './images/triangle-background.jpg'
 
     return (
       <div className='presentation-container' style={{ backgroundImage: `url('${backgroundImage}')` }}>
@@ -31,8 +30,8 @@ export default class Presentation extends Component {
             <img src={profileImage} alt='profile' />
           </div>
         </div>
-        <div className='presentation-image' style={{ backgroundImage: `url('${laptopImage}')` }}>
-          <div className='text-container opacity-black'>
+        <div className='presentation-image'>
+          <div className='text-container filter-medium'>
             <HtmlTag content='HELLO WORLD' />
           </div>
         </div>

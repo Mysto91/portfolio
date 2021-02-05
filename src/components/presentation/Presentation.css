@@ -32,8 +32,8 @@
   background-size: cover;
 }
 
-.opacity-black {
-  background: rgb(0, 0, 0, 0.6);
+.filter-medium {
+  background: rgb(0, 0, 0, 0.5);
 }
 
 .filter-low {
