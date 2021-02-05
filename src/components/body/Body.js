@@ -6,12 +6,12 @@ import SkillContainer from '../skillContainer/SkillContainer'
 import './Body.css'
 
 export default class Body extends Component {
-  render () {
+  render() {
     return (
       <div>
         <Presentation />
         <SkillContainer title='MES COMPÉTENCES' />
-        <HorizontalContainer title='MON PARCOURS SCOLAIRE' cardList={formationCardList} background='#74b9ff' color='white' />
+        <HorizontalContainer title='MON PARCOURS SCOLAIRE' cardList={formationCardList} background='rgb(36, 46, 66)' color='white' />
         <HorizontalContainer title='MON PARCOURS PROFESSIONNEL' cardList={experienceCardList} background='white' />
       </div>
     )

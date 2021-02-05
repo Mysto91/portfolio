@@ -1,6 +1,6 @@
 .wrap-image {
   border-radius: 50%;
-  border: solid #74b9ff 5px;
+  border: solid rgb(36, 46, 66) 5px;
   box-shadow: 0 30px 15px rgb(0, 0, 0, 0.2);
 
   display: grid;

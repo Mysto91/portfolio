@@ -2,7 +2,7 @@
   display: grid;
   grid-template-areas: "logo navigation navigation navigation";
 
-  background-color: #74b9ff;
+  background-color: rgb(36, 46, 66);
   color: white;
   height: 75px;
 }
