@@ -6,7 +6,7 @@ export default class NavigationLinkList extends Component {
     const { linkList } = this.props
 
     return (
-      <div>
+      <div className='link-container'>
         {Array.isArray(linkList) && linkList.map(link => <NavigationLink key={`link-${link.title}`} {...link} />)}
       </div>
     )

@@ -8,13 +8,13 @@ import './SkillContainer.css'
 
 export default class SkillContainer extends Component {
   render () {
-    const { title, background } = this.props
+    const { title, background, color } = this.props
 
     return (
       <div className='skill-container' style={{ background: background !== '' ? background : ' #f4fefe' }}>
         <div className='skill-title-container'>
           <h1>
-            <HtmlTag content={title} />
+            <HtmlTag content={title} color={color} />
           </h1>
         </div>
         <DropListContainer title='Frameworks' content={<BulletList title='Frameworks' list={frameworkBulletList} />} />

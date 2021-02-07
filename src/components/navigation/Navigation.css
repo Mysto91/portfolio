@@ -77,10 +77,6 @@
     background-color: rgb(36, 46, 66);
   }
 
-  .topnav a.active {
-    margin-top: 15px;
-  }
-
   .topnav a.icon {
     background-color: transparent;
   }

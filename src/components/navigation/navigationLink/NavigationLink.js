@@ -4,13 +4,23 @@ import './NavigationLink.css'
 
 export default class NavigationLink extends Component {
 
-  handleOnClick = (event) => scroll(event.target)
+  constructor(props) {
+    super(props);
+    this.state = {
+      isActive: this.props.active
+    }
+  }
+
+  handleOnClick = (event) => {
+    scroll(event.target);
+    this.setState((state) => state.active ? { isActive: false } : { isActive: true });
+  }
 
   render() {
-    const { title, active, content, url, logo } = this.props
+    const { title, content, url, logo } = this.props
     return (
-      <a href={url !== '' ? url : `#${title}`} className={active ? 'active' : ''} onClick={this.handleOnClick}>
-        <div className={'icon-link ' + logo} style={{ display: 'inline-block' }} />
+      <a href={url !== '' ? url : `#${title}`} className={this.state.isActive ? 'active' : ''} onClick={this.handleOnClick}>
+        <div className={'icon-link ' + logo} />
         {content}
       </a>
     )
