@@ -60,3 +60,5 @@ export const scroll = (elementClicked) => {
 }
 
 export const mergeArray = (arr1, arr2) => arr1.map(obj => arr2.find(o => o.title === obj.title) || obj)
+
+export const getHeightPosition = (event) => event.target.scrollingElement.scrollTop

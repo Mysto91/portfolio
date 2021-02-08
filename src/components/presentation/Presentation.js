@@ -27,7 +27,7 @@ export default class Presentation extends Component {
     const backgroundImage = './images/triangle-background.jpg'
 
     return (
-      <div className='presentation-container' style={{ backgroundImage: `url('${backgroundImage}')` }}>
+      <div id='id-presentation' className='presentation-container' style={{ backgroundImage: `url('${backgroundImage}')` }}>
         <div className='presentation-text filter-low'>
           <h1>
             ETIENNE TRAN
