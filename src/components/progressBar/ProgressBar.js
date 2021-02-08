@@ -24,10 +24,12 @@ export default class ProgressBar extends Component {
   }
 
   render() {
-    const { title } = this.props
+    const { title } = this.props;
+    const percentage = this.state.percentage * 100;
     return (
       <div className='meter'>
-        <span style={{ width: this.state.percentage * 100 + '%' }}>{title}</span>
+        <span className='progress-bar' style={{ width: percentage + '%' }}>{title}</span>
+        <span className='percentage'>{percentage.toString().split('.')[0] + '%'}</span>
       </div>
     )
   }
