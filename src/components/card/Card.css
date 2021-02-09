@@ -51,3 +51,32 @@
     height: 400px;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .card {
+    overflow: hidden;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card {
+    height: 120px;
+    width: 300px;
+  }
+
+  .card > h1 {
+    font-size: 20px;
+  }
+
+  .card:hover {
+    height: 300px;
+  }
+
+  .image-container > img {
+    height: 50px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}

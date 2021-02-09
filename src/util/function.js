@@ -47,15 +47,11 @@ export const getBulletList = (json) =>
 export const scroll = (elementClicked) => {
   const href = elementClicked.getAttribute('href')
 
-  const link = href.includes('#') ? href.replace('#', '') : null
+  if (href) {
+    const link = href.includes('#') ? href.replace('#', '') : null
+    const targetScroll = document.getElementById('id-' + link)
 
-  const targetScroll = document.getElementById('id-' + link)
-
-  if (targetScroll) {
-    targetScroll.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
+    if (targetScroll) { targetScroll.scrollIntoView({ behavior: 'smooth', block: 'start' }) }
   }
 }
 

@@ -35,3 +35,9 @@
 .arrow-open {
   transform: rotate(-180deg);
 }
+
+@media screen and (max-width: 600px) {
+  .drop-list-container > h2 {
+    font-size: 20px;
+  }
+}
