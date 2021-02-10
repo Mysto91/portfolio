@@ -7,16 +7,16 @@
         "active" : true
     },
     {
-        "title" : "parcours",
-        "logo" : "fa fa-road",
-        "description" : "Parcours",
+        "title" : "skill",
+        "logo" : "fa fa-trophy",
+        "description" : "Compétences",
         "url" : "",
         "active" : false
     },
     {
-        "title" : "creation",
-        "logo" : "fa fa-building",
-        "description" : "Création",
+        "title" : "parcours",
+        "logo" : "fa fa-road",
+        "description" : "Parcours",
         "url" : "",
         "active" : false
     },

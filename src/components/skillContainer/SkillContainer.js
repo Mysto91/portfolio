@@ -7,11 +7,11 @@ import ProgressBarList from '../progressBarList/ProgressBarList'
 import './SkillContainer.css'
 
 export default class SkillContainer extends Component {
-  render () {
+  render() {
     const { title, background, color } = this.props
 
     return (
-      <div className='skill-container' style={{ background: background !== '' ? background : ' #f4fefe' }}>
+      <div id='id-skill' className='skill-container' style={{ background: background !== '' ? background : ' #f4fefe' }}>
         <div className='skill-title-container'>
           <h1>
             <HtmlTag content={title} color={color} />

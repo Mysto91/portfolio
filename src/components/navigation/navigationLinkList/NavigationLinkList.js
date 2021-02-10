@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { mergeArray, scroll } from '../../../util/function';
+import { isScrollableLink, mergeArray, scroll } from '../../../util/function';
 import NavigationLink from '../navigationLink/NavigationLink'
 
 export default class NavigationLinkList extends Component {
@@ -13,17 +13,23 @@ export default class NavigationLinkList extends Component {
 
   handleOnClick = (event) => {
     const linkList = [...this.state.linkList];
-    scroll(event.target);
 
-    const currentActiveLink = linkList.filter((link) => link.active === true);
-    const newActiveLink = linkList.filter((link) => link.title === event.target.getAttribute('href').replace('#', ''));
+    const target = event.target;
 
-    currentActiveLink[0].active = false;
-    newActiveLink[0].active = true;
+    const href = target.getAttribute('href');
 
-    const update = currentActiveLink.concat(newActiveLink);
+    if (isScrollableLink(href)) {
 
-    this.setState({ linkList: mergeArray(linkList, update) });
+      scroll(target);
+
+      const currentActiveLink = linkList.filter((link) => link.active === true);
+      const newActiveLink = linkList.filter((link) => link.title === href.replace('#', ''));
+
+      currentActiveLink[0].active = false;
+      newActiveLink[0].active = true;
+
+      this.setState({ linkList: mergeArray(linkList, currentActiveLink.concat(newActiveLink)) });
+    }
 
   }
 

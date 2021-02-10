@@ -48,13 +48,15 @@ export const scroll = (elementClicked) => {
   const href = elementClicked.getAttribute('href')
 
   if (href) {
-    const link = href.includes('#') ? href.replace('#', '') : null
+    const link = isScrollableLink(href) ? href.replace('#', '') : null
     const targetScroll = document.getElementById('id-' + link)
 
-    if (targetScroll) { targetScroll.scrollIntoView({ behavior: 'smooth', block: 'start' }) }
+    if (targetScroll) { targetScroll.scrollIntoView({ behavior: 'smooth', block: 'center' }) }
   }
 }
 
 export const mergeArray = (arr1, arr2) => arr1.map(obj => arr2.find(o => o.title === obj.title) || obj)
 
-export const getHeightPosition = (event) => event.target.scrollingElement.scrollTop
+export const getHeightPosition = (event) => event.target.scrollingElement.scrollTop;
+
+export const isScrollableLink = (link) => link.includes('#');
