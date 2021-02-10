@@ -7,7 +7,7 @@ import ProgressBarList from '../progressBarList/ProgressBarList'
 import './SkillContainer.css'
 
 export default class SkillContainer extends Component {
-  render() {
+  render () {
     const { title, background, color } = this.props
 
     return (

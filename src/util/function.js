@@ -7,9 +7,9 @@ import MenuLink from '../components/navigation/MenuLink'
 /**
  * Convert json data into cards list
  *
- * @param string json
+ * @param {string} json
  *
- * @return array
+ * @return {array}
  */
 export const getCardList = (json) =>
   json.map(
@@ -24,9 +24,21 @@ export const getCardList = (json) =>
       )
   )
 
+/**
+ *
+ * @param {string} json
+ *
+ * @return {array}
+ */
 export const getRowList = (json) =>
   json.map((row) => new Row(row.title, row.level))
 
+/**
+ *
+ * @param {string} json
+ *
+ * @return {array}
+ */
 export const getMenuLinkList = (json) =>
   json.map(
     (link) =>
@@ -39,11 +51,23 @@ export const getMenuLinkList = (json) =>
       )
   )
 
+/**
+ *
+ * @param {string} json
+ *
+ * @return {array}
+ */
 export const getBulletList = (json) =>
   json.map(
     (bullet) => new Bullet(bullet.title, bullet.description, bullet.version)
   )
 
+/**
+ *
+ * @param {string} elementClicked
+ *
+ * @return {void}
+ */
 export const scroll = (elementClicked) => {
   const href = elementClicked.getAttribute('href')
 
@@ -55,8 +79,27 @@ export const scroll = (elementClicked) => {
   }
 }
 
+/**
+ *
+ * @param {array} arr1
+ * @param {array} arr2
+ *
+ * @return {array}
+ */
 export const mergeArray = (arr1, arr2) => arr1.map(obj => arr2.find(o => o.title === obj.title) || obj)
 
-export const getHeightPosition = (event) => event.target.scrollingElement.scrollTop;
+/**
+ *
+ * @param {Event} event
+ *
+ * @return {number}
+ */
+export const getHeightPosition = (event) => event.target.scrollingElement.scrollTop
 
-export const isScrollableLink = (link) => link.includes('#');
+/**
+ *
+ * @param {string} link
+ *
+ * @return {boolean}
+ */
+export const isScrollableLink = (link) => link.includes('#')
