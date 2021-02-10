@@ -8,13 +8,13 @@ export default class Navigation extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            topNavClass: 'topnav',
+            topNavClass: 'topnav responsive-closed',
             linkList: menuLinkList
         };
     }
 
     handleClick = event => {
-        this.setState(state => state.topNavClass === 'topnav' ? { topNavClass: state.topNavClass + ' responsive' } : { topNavClass: 'topnav' })
+        this.setState(state => state.topNavClass === 'topnav responsive-closed' ? { topNavClass: 'topnav responsive-open' } : { topNavClass: 'topnav responsive-closed' })
     }
 
     render() {

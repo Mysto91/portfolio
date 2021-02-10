@@ -20,12 +20,13 @@ export default class DropListContainer extends Component {
     render() {
 
         const { title, content } = this.props;
+        const { arrowBtnClass, listClass } = this.state;
 
         return (
             <div className='drop-list-container'>
                 <h2>{title}</h2>
-                <div className={this.state.arrowBtnClass} onClick={this.handleClickDropList} />
-                <div className={this.state.listClass}>
+                <div className={arrowBtnClass} onClick={this.handleClickDropList} />
+                <div className={listClass}>
                     {
                         content
                     }
