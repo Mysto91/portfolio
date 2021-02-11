@@ -7,23 +7,34 @@ export default class Navigation extends Component {
 
     constructor(props) {
         super(props);
+
+        this.defaultClass = 'topnav';
+        this.closeClass = 'responsive-closed';
+        this.openClass = 'responsive-open';
+
         this.state = {
-            topNavClass: 'topnav responsive-closed',
+            topNavClass: `${this.defaultClass} responsive-closed`,
             linkList: menuLinkList
         };
     }
 
-    handleClick = event => {
-        this.setState(state => state.topNavClass === 'topnav responsive-closed' ? { topNavClass: 'topnav responsive-open' } : { topNavClass: 'topnav responsive-closed' })
-    }
+    closeMenu = () => this.setState({ topNavClass: `${this.defaultClass} ${this.closeClass}` });
+
+    openMenu = () => this.setState({ topNavClass: `${this.defaultClass} ${this.openClass}` });
+
+    isOpen = () => !this.state.topNavClass.includes('responsive-closed');
+
+    handleHamburgerClick = (event) => this.isOpen() ? this.closeMenu() : this.openMenu();
+
+    handleLinkClick = (event) => this.closeMenu();
 
     render() {
         return (
             <div id="nav-bar" className="navigation">
                 <div className={this.state.topNavClass} id="myTopnav">
-                    <NavigationLinkList linkList={this.state.linkList} />
+                    <NavigationLinkList linkList={this.state.linkList} handleLinkClick={this.handleLinkClick} />
                 </div>
-                <a id="icon" href="#hamburger" className="icon" onClick={this.handleClick}>
+                <a id="icon" href="#hamburger" className="icon" onClick={this.handleHamburgerClick}>
                     <div>
                         <i style={{ marginTop: '20px' }} className="fa fa-bars fa-2x"></i>
                     </div>

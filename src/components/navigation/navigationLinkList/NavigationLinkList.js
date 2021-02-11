@@ -12,6 +12,9 @@ export default class NavigationLinkList extends Component {
   }
 
   handleOnClick = (event) => {
+
+    this.props.handleLinkClick();
+
     const linkList = [...this.state.linkList];
 
     const target = event.target;
@@ -28,7 +31,9 @@ export default class NavigationLinkList extends Component {
       currentActiveLink[0].active = false;
       newActiveLink[0].active = true;
 
-      this.setState({ linkList: mergeArray(linkList, currentActiveLink.concat(newActiveLink)) });
+      this.setState({
+        linkList: mergeArray(linkList, currentActiveLink.concat(newActiveLink))
+      });
     }
 
   }
