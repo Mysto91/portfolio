@@ -3,13 +3,21 @@ import Navigation from '../navigation/Navigation'
 import './Header.css'
 
 export default class Header extends Component {
-  render () {
+
+  handleOnClick = () => {
+    this.props.handleOnClick();
+  }
+
+  render() {
+
+    const { className, clickDetected } = this.props;
+
     return (
-      <div className={this.props.className}>
+      <div className={className}>
         <div className='logo-container'>
           <div className='logo'>Etienne TRAN</div>
         </div>
-        <Navigation />
+        <Navigation clickDetected={clickDetected} handleOnClick={this.handleOnClick} />
       </div>
     )
   }

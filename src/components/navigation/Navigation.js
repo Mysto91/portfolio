@@ -14,7 +14,8 @@ export default class Navigation extends Component {
 
         this.state = {
             topNavClass: `${this.defaultClass} responsive-closed`,
-            linkList: menuLinkList
+            linkList: menuLinkList,
+            clickDetected: this.props.clickDetected
         };
     }
 
@@ -28,15 +29,24 @@ export default class Navigation extends Component {
 
     handleLinkClick = (event) => this.closeMenu();
 
+    componentDidUpdate = (prevProps, prevState) => {
+
+        if (prevProps.clickDetected !== this.props.clickDetected) {
+            if (this.isOpen())
+                this.closeMenu();
+            this.props.handleOnClick();
+        }
+    }
+
     render() {
         return (
             <div id="nav-bar" className="navigation">
                 <div className={this.state.topNavClass} id="myTopnav">
                     <NavigationLinkList linkList={this.state.linkList} handleLinkClick={this.handleLinkClick} />
                 </div>
-                <a id="icon" href="#hamburger" className="icon" onClick={this.handleHamburgerClick}>
+                <a id="link-hamburger" href="#hamburger" className="icon" onClick={this.handleHamburgerClick}>
                     <div>
-                        <i style={{ marginTop: '20px' }} className="fa fa-bars fa-2x"></i>
+                        <i id="icon-hamburger" style={{ marginTop: '20px' }} className="fa fa-bars fa-2x"></i>
                     </div>
                 </a>
             </div>
