@@ -5,41 +5,37 @@ import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
 import { getHeightPosition } from './util/function'
 
-function App() {
-  const [currentPos, setCurrentPos] = useState(0);
-  const [headerClass, setHeaderClass] = useState('container');
-  const [clickOutsideMenu, setClickOutsideMenu] = useState(false);
+function App () {
+  const [currentPos, setCurrentPos] = useState(0)
+  const [headerClass, setHeaderClass] = useState('container')
+  const [clickOutsideMenu, setClickOutsideMenu] = useState(false)
 
-  function closeMenu(target) {
-    if (target.getAttribute('id') == 'icon-hamburger')
-      return;
+  function closeMenu (target) {
+    if (target.getAttribute('id') === 'icon-hamburger') { return }
 
-    const firstChild = target.firstChild;
+    const firstChild = target.firstChild
 
-    if (firstChild != undefined && firstChild != null && typeof firstChild != 'string') {
-
-      console.log(firstChild);
-      if (firstChild.getAttribute('id') == 'icon-hamburger')
-        return;
+    if (firstChild !== undefined && firstChild !== null) {
+      if (firstChild.id !== undefined && firstChild.getAttribute('id') === 'icon-hamburger') { return }
     }
 
-    setClickOutsideMenu(true);
+    setClickOutsideMenu(true)
   }
 
   useEffect(() => {
     window.onscroll = (event) => {
-      const newPos = getHeightPosition(event);
-      setHeaderClass(newPos > currentPos ? 'container transparent' : 'container');
-      setCurrentPos(newPos);
+      const newPos = getHeightPosition(event)
+      setHeaderClass(newPos > currentPos ? 'container transparent' : 'container')
+      setCurrentPos(newPos)
     }
 
     window.onclick = (event) => {
-      closeMenu(event.target);
+      closeMenu(event.target)
     }
   })
 
-  function handleOnClickOutsideMenu(params) {
-    setClickOutsideMenu(false);
+  function handleOnClickOutsideMenu (params) {
+    setClickOutsideMenu(false)
   }
 
   return (
