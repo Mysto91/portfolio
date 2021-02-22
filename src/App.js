@@ -5,12 +5,12 @@ import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
 import { getHeightPosition } from './util/function'
 
-function App () {
+function App() {
   const [currentPos, setCurrentPos] = useState(0)
   const [headerClass, setHeaderClass] = useState('container')
   const [clickOutsideMenu, setClickOutsideMenu] = useState(false)
 
-  function closeMenu (target) {
+  function closeMenu(target) {
     if (target.getAttribute('id') === 'icon-hamburger') { return }
 
     const firstChild = target.firstChild
@@ -34,7 +34,7 @@ function App () {
     }
   })
 
-  function handleOnClickOutsideMenu (params) {
+  function handleOnClickOutsideMenu(params) {
     setClickOutsideMenu(false)
   }
 

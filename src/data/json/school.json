@@ -6,23 +6,23 @@
         "badgeList" : [
             {
                 "title": "C/C++",
-                "color": "#1abc9c"
+                "color": "rgb(36, 46, 66)"
             },
             {
                 "title": "Matlab",
-                "color": "#34495e"
+                "color": "rgb(36, 46, 66)"
             },
             {
                 "title": "VBA",
-                "color": "#e67e22"
+                "color": "rgb(36, 46, 66)"
             },
             {
                 "title": "XML",
-                "color": "#8e44ad"
+                "color": "rgb(36, 46, 66)"
             },
             {
                 "title": "XSLT",
-                "color": "#74b9ff"
+                "color": "rgb(36, 46, 66)"
             }
         ]
     },
@@ -33,23 +33,23 @@
         "badgeList" : [
             {
                 "title": "php",
-                "color": "#34495e"
+                "color": "rgb(36, 46, 66)"
             },
             {
                 "title": "html",
-                "color": "#e67e22"
+                "color": "rgb(36, 46, 66)"
             },
             {
                 "title": "css",
-                "color": "#3498db"
+                "color": "rgb(36, 46, 66)"
             },
             {
                 "title": "javascript",
-                "color": "#f1c40f"
+                "color": "rgb(36, 46, 66)"
             },
             {
                 "title": "sql",
-                "color": "#487eb0"
+                "color": "rgb(36, 46, 66)"
             }
         ]
     }
