@@ -14,7 +14,14 @@
         "active" : false
     },
     {
-        "title" : "parcours",
+        "title" : "study",
+        "logo" : "fa fa-road",
+        "description" : "Parcours",
+        "url" : "",
+        "active" : false
+    },
+    {
+        "title" : "experience",
         "logo" : "fa fa-road",
         "description" : "Parcours",
         "url" : "",

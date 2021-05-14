@@ -9,6 +9,7 @@ function App () {
   const [currentPos, setCurrentPos] = useState(0)
   const [headerClass, setHeaderClass] = useState('container')
   const [clickOutsideMenu, setClickOutsideMenu] = useState(false)
+  const [changeParagraph, setChangeParagraph] = useState(null)
 
   function closeMenu (target) {
     if (target.getAttribute('id') === 'icon-hamburger') { return }
@@ -27,6 +28,12 @@ function App () {
       const newPos = getHeightPosition(event)
       setHeaderClass(newPos > currentPos ? 'container transparent' : 'container')
       setCurrentPos(newPos)
+
+      const paragraphVisible = getParagraphVisible();
+
+      if (paragraphVisible) {
+          setChangeParagraph(paragraphVisible);
+      }
     }
 
     window.onclick = (event) => {
@@ -38,11 +45,49 @@ function App () {
     setClickOutsideMenu(false)
   }
 
+  function isScrolledIntoView(elementId) {
+    const rect = document.getElementById(elementId).getBoundingClientRect();
+    const elemTop = rect.top;
+    const elemBottom = rect.bottom;
+
+    return (elemTop >= 0) && (elemBottom <= window.innerHeight);
+  }
+
+  function getParagraphVisible() {
+
+    if (isScrolledIntoView('id-presentation')) {
+      return 'presentation';
+    }
+
+    if (isScrolledIntoView('id-skill')) {
+      return 'skill';
+    }
+
+    if (isScrolledIntoView('id-study')) {
+      return 'study';
+    }
+
+    if (isScrolledIntoView('id-experience')) {
+      return 'experience';
+    }
+
+    if (isScrolledIntoView('id-contact')) {
+      return 'contact';
+    }
+
+    return null;
+  }
+
   return (
     <div className='App'>
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' />
-      <Header className={headerClass} clickDetected={clickOutsideMenu} handleOnClick={handleOnClickOutsideMenu} />
+      <Header 
+        className={headerClass} 
+        clickDetected={clickOutsideMenu} 
+        changeParagraphDetected={changeParagraph} 
+        handleOnClick={handleOnClickOutsideMenu} 
+      />
       <Body />
       <Footer />
     </div>

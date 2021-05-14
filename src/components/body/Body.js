@@ -11,8 +11,8 @@ export default class Body extends Component {
       <div>
         <Presentation />
         <SkillContainer title='MES COMPÉTENCES' color='rgb(36, 46, 66)' />
-        <HorizontalContainer title='MON PARCOURS SCOLAIRE' cardList={formationCardList} background='rgb(36, 46, 66)' color='white' />
-        <HorizontalContainer title='MON PARCOURS PROFESSIONNEL' cardList={experienceCardList} background='white' color='rgb(36, 46, 66)' />
+        <HorizontalContainer id='id-study' title='MON PARCOURS SCOLAIRE' cardList={formationCardList} background='rgb(36, 46, 66)' color='white' />
+        <HorizontalContainer id='id-experience' title='MON PARCOURS PROFESSIONNEL' cardList={experienceCardList} background='white' color='rgb(36, 46, 66)' />
       </div>
     )
   }

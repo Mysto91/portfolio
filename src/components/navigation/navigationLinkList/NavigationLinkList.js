@@ -7,15 +7,14 @@ export default class NavigationLinkList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      linkList: this.props.linkList
+      linkList: this.props.linkList,
+      changeParagraphDetected : this.props.changeParagraphDetected
     };
   }
 
   handleOnClick = (event) => {
 
     this.props.handleLinkClick();
-
-    const linkList = [...this.state.linkList];
 
     const target = event.target;
 
@@ -25,7 +24,20 @@ export default class NavigationLinkList extends Component {
 
       scroll(target);
 
-      const currentActiveLink = linkList.filter((link) => link.active === true);
+      this.activeLink(href);
+    }
+  }
+
+  componentDidUpdate = (prevProps, prevState) => {
+    if (prevProps.changeParagraphDetected !== this.props.changeParagraphDetected) {
+        this.activeLink(`#${this.props.changeParagraphDetected}`);
+    }
+  } 
+
+  activeLink = (href) => {
+    const linkList = [...this.state.linkList];
+
+    const currentActiveLink = linkList.filter((link) => link.active === true);
       const newActiveLink = linkList.filter((link) => link.title === href.replace('#', ''));
 
       currentActiveLink[0].active = false;
@@ -34,8 +46,6 @@ export default class NavigationLinkList extends Component {
       this.setState({
         linkList: mergeArray(linkList, currentActiveLink.concat(newActiveLink))
       });
-    }
-
   }
 
   render() {

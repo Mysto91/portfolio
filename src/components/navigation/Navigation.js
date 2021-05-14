@@ -42,7 +42,11 @@ export default class Navigation extends Component {
         return (
             <div id="nav-bar" className="navigation">
                 <div className={this.state.topNavClass} id="myTopnav">
-                    <NavigationLinkList linkList={this.state.linkList} handleLinkClick={this.handleLinkClick} />
+                    <NavigationLinkList 
+                        changeParagraphDetected={this.props.changeParagraphDetected} 
+                        linkList={this.state.linkList} 
+                        handleLinkClick={this.handleLinkClick} 
+                    />
                 </div>
                 <a id="link-hamburger" href="#hamburger" className="icon" onClick={this.handleHamburgerClick}>
                     <div>

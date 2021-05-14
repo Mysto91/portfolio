@@ -5,10 +5,10 @@ import './HorizontalContainer.css'
 
 export default class HorizontalContainer extends Component {
   render () {
-    const { title, cardList, background, color } = this.props
+    const { title, cardList, background, color, id } = this.props
     return (
       <div
-        id='id-parcours'
+        id={id}
         className='horizontal-container' style={{
           background: background !== '' ? background : ' #f4fefe',
           color: color !== '' ? color : 'white'

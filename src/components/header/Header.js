@@ -10,14 +10,18 @@ export default class Header extends Component {
 
   render() {
 
-    const { className, clickDetected } = this.props;
+    const { className, clickDetected, changeParagraphDetected } = this.props;
 
     return (
       <div className={className}>
         <div className='logo-container'>
           <div className='logo'>Etienne TRAN</div>
         </div>
-        <Navigation clickDetected={clickDetected} handleOnClick={this.handleOnClick} />
+        <Navigation 
+          clickDetected={clickDetected} 
+          changeParagraphDetected={changeParagraphDetected} 
+          handleOnClick={this.handleOnClick} 
+        />
       </div>
     )
   }
